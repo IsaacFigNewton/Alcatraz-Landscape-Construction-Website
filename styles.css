@@ -114,10 +114,7 @@ a {
 	width: 200px;
 }
 #block {
-	border:2px;
-	border-style:solid;
-	border-color:#FFFFFF;
-	background-image: url(images/background.jpg);
+	display:inline-block;
 }
 .jobs {
 	display:inline-block;
