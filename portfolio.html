@@ -23,10 +23,18 @@
 		</div>
 		
 		<script type="text/javascript">
+			var show = false;
 			function openPics(jobID) {
+				show = !show;
+				if (show) {
 				document.getElementById(jobID).style.visibility='visible';
 				document.getElementById(jobID).style.display='inline-block';
 				return false;
+				} else {
+				document.getElementById(jobID).style.visibility='hidden';
+				document.getElementById(jobID).style.display='none';
+				return false;
+				}
 			}
 		</script>
 		
