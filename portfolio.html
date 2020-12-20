@@ -13,26 +13,89 @@
 				<button class="headButton"><a href="portfolio.html">Portfolio</a></button>
 				<a href="index.html"><img src="images/logo.jpg" height="100px" width="100px" class="headButton"></a>
 				<button class="headButton"><a href="contactus.html">Contact Us</a></button>
-			<hr>
 			<br>
 		</div>
 	</div>
+	
 	<div class="body">
+		<div class="whiteBlock">
 		<div class="title">
 		<h2>Previous Work</h2>
 		</div>
 		
 		<script type="text/javascript">
-			var show = false;
+			var show1 = false;
+			var show2 = false;
+			var show3 = false;
+			var show4 = false;
 			function openPics(jobID) {
-				show = !show;
-				if (show) {
-				document.getElementById(jobID).style.visibility='visible';
-				document.getElementById(jobID).style.display='inline-block';
+				//show 1 or 0 jobs at a time
+				if (jobID == 'job1') {
+					show1 = !show1;
+					show2 = false;
+					show3 = false;
+					show4 = false;
+				} else if (jobID == 'job2') {
+					show1 = false;
+					show2 = !show2;
+					show3 = false;
+					show4 = false;
+				} else if (jobID == 'job3') {
+					show1 = false;
+					show2 = false;
+					show3 = !show3;
+					show4 = false;
+				} else if (jobID == 'job4') {
+					show1 = false;
+					show2 = false;
+					show3 = false;
+					show4 = !show4;
+				}
+				
+				//show only the right jobs
+				if (show1) {
+				document.getElementById('divider').style.visibility='visible';
+				document.getElementById('job1').style.visibility='visible';
+				document.getElementById('job1').style.display='inline-block';
+				document.getElementById('job2').style.visibility='hidden';
+				document.getElementById('job2').style.display='none';
+				document.getElementById('job3').style.visibility='hidden';
+				document.getElementById('job3').style.display='none';
+				document.getElementById('job4').style.visibility='hidden';
+				document.getElementById('job4').style.display='none';
 				return false;
-				} else {
-				document.getElementById(jobID).style.visibility='hidden';
-				document.getElementById(jobID).style.display='none';
+				} else if (show2) {
+				document.getElementById('divider').style.visibility='visible';
+				document.getElementById('job1').style.visibility='hidden';
+				document.getElementById('job1').style.display='none';
+				document.getElementById('job2').style.visibility='visible';
+				document.getElementById('job2').style.display='inline-block';
+				document.getElementById('job3').style.visibility='hidden';
+				document.getElementById('job3').style.display='none';
+				document.getElementById('job4').style.visibility='hidden';
+				document.getElementById('job4').style.display='none';
+				return false;
+				} else if (show3) {
+				document.getElementById('divider').style.visibility='visible';
+				document.getElementById('job1').style.visibility='hidden';
+				document.getElementById('job1').style.display='none';
+				document.getElementById('job2').style.visibility='hidden';
+				document.getElementById('job2').style.display='none';
+				document.getElementById('job3').style.visibility='visible';
+				document.getElementById('job3').style.display='inline-block';
+				document.getElementById('job4').style.visibility='hidden';
+				document.getElementById('job4').style.display='none';
+				return false;
+				} else if (show4) {
+				document.getElementById('divider').style.visibility='visible';
+				document.getElementById('job1').style.visibility='hidden';
+				document.getElementById('job1').style.display='none';
+				document.getElementById('job2').style.visibility='hidden';
+				document.getElementById('job2').style.display='none';
+				document.getElementById('job3').style.visibility='hidden';
+				document.getElementById('job3').style.display='none';
+				document.getElementById('job4').style.visibility='visible';
+				document.getElementById('job4').style.display='inline-block';
 				return false;
 				}
 			}
@@ -52,45 +115,51 @@
 					<div class="job" id="jobItem4"><a href="#job4" onclick="openPics('job4')">Landscaping Job 4</a></div>
 				</div>
 				
+				<br>
+				<hr id="divider">
+				<br>
+				
 				<div id="job1">
-					<img src="images/frontYardSucculents1.jpg" height="600px" width="400px">
-					<img src="images/frontYardSucculents2.jpg" height="800px" width="800px">
+					<img src="images/job1/1b.jpg" height="600px" width="750px">
+					<img src="images/job1/1c1.jpg" height="400px" width="600px">
+					<img src="images/job1/1c2.jpg" height="500px" width="500px">
+					<img src="images/job1/1d.jpg" height="400px" width="600px">
+					<img src="images/job1/1a.jpg" height="500px" width="400px">
+					<img src="images/job1/2a.jpg" height="600px" width="400px">
+					<img src="images/job1/frontYardSucculents1.jpg" height="600px" width="400px">
+					<img src="images/job1/frontYardSucculents2.jpg" height="800px" width="800px">
 				</div>
 				<div id="job2">
-					<img src="images/patio1.jpg" height="600px" width="400px">
-					<img src="images/patio2.jpg" height="500px" width="400px">
-					<img src="images/patio3.jpg" height="500px" width="400px">
-					<img src="images/patioPergola1.jpg" height="800px" width="800px">
-					<img src="images/patioPergola2.jpg" height="600px" width="400px">
+					<img src="images/job2/patio0.jpg" height="600px" width="400px">
+					<img src="images/job2/patio1.jpg" height="600px" width="400px">
+					<img src="images/job2/patio2.jpg" height="500px" width="400px">
+					<img src="images/job2/patioPergola0a.jpg" height="500px" width="400px">
+					<img src="images/job2/patioPergola0b.jpg" height="600px" width="400px">
+					<img src="images/job2/patioPergola1.jpg" height="800px" width="800px">
+					<img src="images/job2/patioPergola2.jpg" height="600px" width="400px">
 				</div>
 				<div id="job3">
-					<img src="images/placeholder.jpg" height="800px" width="400px">
-					<img src="images/placeholder.jpg" height="800px" width="400px">
-					<img src="images/placeholder.jpg" height="800px" width="400px">
-					<img src="images/placeholder.jpg" height="800px" width="400px">
+					<img src="images/job3/backyardTiles1.jpg" height="800px" width="600px">
+					<img src="images/job3/backyardTiles2.jpg" height="500px" width="500px">
+					<img src="images/job3/fenceTops.jpg" height="600px" width="750px">
+					<img src="images/job3/sCurb.jpg" height="400px" width="600px">
+					<img src="images/job3/frontCurbAndTile.jpg" height="600px" width="600px">
+					<img src="images/job3/vineOnTrellis.jpg" height="600px" width="900px">
 				</div>
 				<div id="job4">
-					<img src="images/placeholder.jpg" height="800px" width="400px">
-					<img src="images/placeholder.jpg" height="800px" width="400px">
-					<img src="images/placeholder.jpg" height="800px" width="400px">
-					<img src="images/placeholder.jpg" height="800px" width="400px">
+					<img src="images/job4/tilesAndBrickWall.jpg" height="500px" width="400px">
+					<img src="images/job4/fountain.jpg" height="500px" width="400px">
+					<img src="images/placeholder.jpg" height="400px" width="400px">
+					<img src="images/placeholder.jpg" height="400px" width="400px">
 				</div>
 		</div>
 	</div>
 </body>
 	<footer class="footer">
-		<h5>Site made by Isaac Rudnick</h5>
-		<!-- The footer buttons are going to be icons-->
-		<div class="footButtons">
-			Email: <a href="mailto:mamartinez932@gmail.com?subject = Need Landscaping Work&body = Message">mamartinez932@gmail.com</a>
-			
-			<a href="https://www.facebook.com/camaneylandscape"><button class=facebookButton></button></a>
-			<!--
-			<a href="#"><button class=linkedInButton></button></a>
-			<a href="#"><button class=twitterButton></button></a>
-			<a href="#"><button class=instagramButton></button></a>
-			-->
-			Phone: <a href="#">(805)-788-8509</a>
-		</div>
+		Email: <a href="mailto:mamartinez932@gmail.com?subject = Need Landscaping Work&body = Message">mamartinez932@gmail.com</a>
+		<a href="https://www.facebook.com/camaneylandscape"><button class=facebookButton></button></a>
+		Phone: <a href="#">(805)-788-8509</a>
+		
+		<h5>Site made by <a href="mailto:igeek10000@gmail.com?subject = Need Web Design Work&body = Message">Isaac Rudnick</a></h5>
 	</footer>
 </html>
